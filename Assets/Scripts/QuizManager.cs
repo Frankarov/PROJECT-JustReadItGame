@@ -95,7 +95,7 @@ public class QuizManager : MonoBehaviour
                 PlayerPrefs.SetInt("Score", 0);
             }
 
-            finalScore = Mathf.RoundToInt((PlayerPrefs.GetInt("Score") + questionnaireScore) / 2);
+            finalScore = Mathf.RoundToInt((PlayerPrefs.GetInt("Score") + questionnaireScore));
             if (finalScore > 300 && finalScore<450)
             {
                 finishGameText.text = "Good";
