@@ -36,9 +36,11 @@ public class QuizManager : MonoBehaviour
     int[] arrayOpsiC = {2,4,5};
     int[] arrayOpsiEnd = { 2, 5 };
 
-
+    public GameObject scorePanel;
+    public TMP_Text finishGameText;
     private void Start()
     {
+        PlayerPrefs.SetInt("Score", 0);
         textVersion = 0;
         GantiTextSoalJawaban();
     }
@@ -66,7 +68,30 @@ public class QuizManager : MonoBehaviour
     public void ButtonPressed()
     {
         Debug.Log("ButtonPressed");
+
+
         textVersion += 1;
+        if (textVersion >= soal.Length)
+        {
+            if (PlayerPrefs.GetInt("Score") > 50)
+            {
+                finishGameText.text = "Good";
+            }
+            else
+            {
+                finishGameText.text = "Bad";
+            }
+
+            canvasQuiz.SetActive(false);
+            scorePanel.SetActive(true);
+            if (PlayerPrefs.GetInt("Score") < 0)
+            {
+                PlayerPrefs.SetInt("Score", 0);
+            }
+            scorePanel.transform.GetChild(1).transform.GetComponent<TMPro.TMP_Text>().text = "Your Score: " + PlayerPrefs.GetInt("Score");
+            return;
+        }
+
         questionIndex = textVersion - 1; //mempermudah coding. Question index menunjukan pertanyaan ke berapa yang muncul.
         GantiTextSoalJawaban();
         CheckPilihan();
@@ -75,17 +100,17 @@ public class QuizManager : MonoBehaviour
 
     public void CheckPilihan()
     {
-        if (arrayOpsiEnd.Contains(questionIndex)) //When Question Ends
-        {
-            gameManagerScript.finish = false;
-            canvasShop.SetActive(true);
-            canvasQuiz.SetActive(false);
+        //if (arrayOpsiEnd.Contains(questionIndex)) //When Question Ends
+        //{
+        //    gameManagerScript.finish = false;
+        //    canvasShop.SetActive(true);
+        //    canvasQuiz.SetActive(false);
 
-        }
-        else
-        {
-            boldScript.enabled = false;
-        }
+        //}
+        //else
+        //{
+        //    boldScript.enabled = false;
+        //}
 
 
         if (arrayOpsiA.Contains(questionIndex))
@@ -130,6 +155,4 @@ public class QuizManager : MonoBehaviour
         textOpsiB.text = opsiB[textVersion];
         textOpsiC.text = opsiC[textVersion];
     }
-
-
 }

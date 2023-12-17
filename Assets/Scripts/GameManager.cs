@@ -10,12 +10,12 @@ public class GameManager : MonoBehaviour
 {
     public GameObject canvasReading;
     public GameObject canvasQuiz;
-    public GameObject canvasShop;
+    public GameObject canvasShop { get; set; }
     public GameObject insufficient;
     public GameObject canvasGameOver;
 
     public TMP_Text textReading;
-    public Text timerText;
+    public TMP_Text timerText;
     public TMP_Text scoreText;
     public string[] reading;
     private int readingVersion;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public BoldScript boldScript;
     [SerializeField]
     private int thenScore;
-    private bool kunci = false;
+    public bool isStart = false;
 
     void Start()
     {
@@ -49,9 +49,10 @@ public class GameManager : MonoBehaviour
             UpdateTextTimer();
 
         }
-        else if(currentTime <=0)
+        else if(currentTime <=0 && !finish)
         {
             currentTime = 0;
+            Finish();
         }
     }
 
@@ -65,17 +66,11 @@ public class GameManager : MonoBehaviour
     private void UpdateTextScore()
     {
         int previousScore = PlayerPrefs.GetInt("Score");
-        scoreText.text = "Score : " + previousScore;
-
-        if(previousScore < 0 && !kunci)
+        if (previousScore < 0)
         {
-            Debug.Log("GameOver");
-            canvasGameOver.SetActive(true);
-            canvasReading.SetActive(false);
-            canvasQuiz.SetActive(false);
-            canvasShop.SetActive(false);
-            kunci = true;
+            previousScore = 0;
         }
+        scoreText.text = "Score : " + previousScore;
     }
 
     public void Finish()

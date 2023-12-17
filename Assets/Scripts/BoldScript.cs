@@ -5,10 +5,15 @@ using TMPro;
 public class BoldScript : MonoBehaviour
 {
     public TMP_Text textMeshPro;
-
+    bool format;
     private void Start()
     {
         FormatBionic();
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void FormatBionic()
