@@ -100,17 +100,20 @@ public class QuizManager : MonoBehaviour
 
     public void CheckPilihan()
     {
-        //if (arrayOpsiEnd.Contains(questionIndex)) //When Question Ends
-        //{
-        //    gameManagerScript.finish = false;
-        //    canvasShop.SetActive(true);
-        //    canvasQuiz.SetActive(false);
-
-        //}
-        //else
-        //{
-        //    boldScript.enabled = false;
-        //}
+        if (arrayOpsiEnd.Contains(questionIndex)) //When Question Ends
+        {
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 3)
+            {
+                boldScript.FormatBionic();
+            }
+            gameManagerScript.finish = false;
+            canvasReading.SetActive(true);
+            canvasQuiz.SetActive(false);
+        }
+        else
+        {
+            boldScript.enabled = false;
+        }
 
 
         if (arrayOpsiA.Contains(questionIndex))
