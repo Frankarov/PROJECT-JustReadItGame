@@ -55,13 +55,24 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
+        int prevScore = PlayerPrefs.GetInt("Score");
+        int currScore = prevScore + 5;
+        PlayerPrefs.SetInt("Score", currScore);
+        gameManagerScript.scoreText.text = currScore.ToString();
         questionnaireScore += 5;
     }
 
     public void Wrong()
     {
-        if(questionnaireScore>0)
+        int prevScore = PlayerPrefs.GetInt("Score");
+        int currScore = prevScore - 10;
+        PlayerPrefs.SetInt("Score", currScore);
+        gameManagerScript.scoreText.text = currScore.ToString();
+        if (questionnaireScore > 0)
+        {
             questionnaireScore -= 10;
+        }
+            
     }
 
 
@@ -71,6 +82,7 @@ public class QuizManager : MonoBehaviour
 
 
         textVersion += 1;
+        Debug.Log(textVersion);
         if (textVersion >= soal.Length)
         {
             if (questionnaireScore < 0)
