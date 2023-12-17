@@ -127,6 +127,7 @@ public class QuizManager : MonoBehaviour
     {
         if (arrayOpsiEnd.Contains(questionIndex)) //When Question Ends
         {
+            gameManagerScript.currentTime = 30;
             if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 3)
             {
                 boldScript.FormatBionic();

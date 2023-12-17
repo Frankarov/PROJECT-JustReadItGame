@@ -81,7 +81,6 @@ public class GameManager : MonoBehaviour
         readingVersion =+ 1;
         textReading.text = reading[readingVersion];
         currentTimeInt = Mathf.RoundToInt(currentTime);
-
         int previousScore = PlayerPrefs.GetInt("Score");
         thenScore = currentTimeInt + previousScore;
         PlayerPrefs.SetInt("Score", thenScore);
