@@ -96,13 +96,17 @@ public class QuizManager : MonoBehaviour
             }
 
             finalScore = Mathf.RoundToInt((PlayerPrefs.GetInt("Score") + questionnaireScore) / 2);
-            if (finalScore > 50)
+            if (finalScore > 300 && finalScore<450)
             {
                 finishGameText.text = "Good";
             }
+            else if(finalScore>450)
+            {
+                finishGameText.text = "Excellent";
+            }
             else
             {
-                finishGameText.text = "Bad";
+                finishGameText.text = "You need to practice more";
             }
 
             canvasQuiz.SetActive(false);
