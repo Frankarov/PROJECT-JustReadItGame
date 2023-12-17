@@ -38,6 +38,9 @@ public class QuizManager : MonoBehaviour
 
     public GameObject scorePanel;
     public TMP_Text finishGameText;
+
+    private int questionnaireScore = 0;
+    private int finalScore = 0;
     private void Start()
     {
         PlayerPrefs.SetInt("Score", 0);
@@ -52,16 +55,13 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
-        int scoreTemp = PlayerPrefs.GetInt("Score");
-        scoreTemp += 5;
-        PlayerPrefs.SetInt("Score", scoreTemp);
+        questionnaireScore += 5;
     }
 
     public void Wrong()
     {
-        int scoreTemp = PlayerPrefs.GetInt("Score");
-        scoreTemp -= 10;
-        PlayerPrefs.SetInt("Score", scoreTemp);
+        if(questionnaireScore>0)
+            questionnaireScore -= 10;
     }
 
 
@@ -73,7 +73,18 @@ public class QuizManager : MonoBehaviour
         textVersion += 1;
         if (textVersion >= soal.Length)
         {
-            if (PlayerPrefs.GetInt("Score") > 50)
+            if (questionnaireScore < 0)
+            {
+                questionnaireScore = 0;
+            }
+
+            if (PlayerPrefs.GetInt("Score") < 0)
+            {
+                PlayerPrefs.SetInt("Score", 0);
+            }
+
+            finalScore = Mathf.RoundToInt((PlayerPrefs.GetInt("Score") + questionnaireScore) / 2);
+            if (finalScore > 50)
             {
                 finishGameText.text = "Good";
             }
@@ -84,11 +95,9 @@ public class QuizManager : MonoBehaviour
 
             canvasQuiz.SetActive(false);
             scorePanel.SetActive(true);
-            if (PlayerPrefs.GetInt("Score") < 0)
-            {
-                PlayerPrefs.SetInt("Score", 0);
-            }
-            scorePanel.transform.GetChild(1).transform.GetComponent<TMPro.TMP_Text>().text = "Your Score: " + PlayerPrefs.GetInt("Score");
+            scorePanel.transform.GetChild(3).transform.GetComponent<TMPro.TMP_Text>().text = "Final Score : " + finalScore;
+            scorePanel.transform.GetChild(1).transform.GetComponent<TMPro.TMP_Text>().text = "Reading Speed Score        : " + PlayerPrefs.GetInt("Score");
+            scorePanel.transform.GetChild(2).transform.GetComponent<TMPro.TMP_Text>().text = "Reading Comprehension Score: " + questionnaireScore;
             return;
         }
 
