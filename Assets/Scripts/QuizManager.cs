@@ -31,10 +31,10 @@ public class QuizManager : MonoBehaviour
     public string[] opsiC;
 
     //KunciJawaban
-    int[] arrayOpsiA = {0,1};
-    int[] arrayOpsiB = {3};
-    int[] arrayOpsiC = {2,4,5};
-    int[] arrayOpsiEnd = { 2, 5 };
+    int[] arrayOpsiA = { 0, 1, 4, 8, 12, 19, 21, 24, 29 };
+    int[] arrayOpsiB = { 2, 3, 5, 6, 7, 9, 10, 13, 15, 16, 17, 22, 23, 25, 26, 27, 28 };
+    int[] arrayOpsiC = { 11, 14, 18, 20 };
+    int[] arrayOpsiEnd = { 2, 5, 8, 11, 14, 17, 20, 23, 26, 29 };
 
     public GameObject scorePanel;
     public TMP_Text finishGameText;

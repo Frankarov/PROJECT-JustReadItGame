@@ -1023,12 +1023,51 @@ MonoBehaviour:
   timerText: {fileID: 116808143}
   scoreText: {fileID: 778847993}
   reading:
-  - Budi adalah kepala keluarga dari Jawa Barat. Budi sering bermain judi dengan
-    teman-teman kantornya yang berlokasi di Jalan Senapelan. Budi depresi dengan
-    hidupnya dan sering memikirkan untuk liburan.
-  - Richard adalah anak yang baik. Dia menyukai warna hijau tua dan sering terlibat
-    dalam gotong royong. Dia menyukai ayam goreng yang dicampuri dengan sambal merah.
-  - Ini mah elemen ketiga cokz
+  - In a quiet village, there was a magical pond surrounded by lush greenery. The
+    pond was said to grant wishes to those who visited it with a pure heart. Sarah,
+    a curious young girl, heard about the pond's enchanting powers and decided to
+    explore it. As she approached, she noticed colorful flowers blooming around the
+    water's edge, and the air was filled with the sweet scent of nature.
+  - 'Deep in the heart of the rainforest, there was a hidden temple with ancient
+    carvings and mysterious symbols. Lisa, an adventurous archaeologist, discovered
+    a map leading to the temple. She embarked on a challenging journey, trekking
+    through dense foliage and crossing roaring rivers to unveil the secrets of the
+    lost civilization. '
+  - In a quaint seaside town, there stood an ancient lighthouse that had guided ships
+    for centuries. The lighthouse keeper, Mr. Johnson, dedicated his life to ensuring
+    the safety of sailors. One stormy night, a ship lost its way, and Mr. Johnson's
+    quick thinking and bravery saved the crew from disaster.
+  - On the outskirts of a bustling city, there was an abandoned mansion with a mysterious
+    past. Legend had it that the mansion was haunted by the ghost of a former resident.
+    Curious teenagers dared each other to spend a night inside, but none had ever
+    made it through the eerie experience.
+  - 'In a vast desert, there was a hidden oasis with emerald-green palm trees and
+    a crystal-clear pool. The oasis was a haven for weary travelers seeking refuge
+    from the scorching sun. Maya, a nomadic explorer, stumbled upon this oasis during
+    her quest for new lands to explore. '
+  - 'In the heart of a bustling metropolis, there stood a mysterious clock tower
+    that was said to control the flow of time itself. The clock tower had intricate
+    gears and mechanisms, and it chimed every hour with a mesmerizing melody. Mia,
+    an inquisitive clockmaker, discovered a hidden room within the tower, unlocking
+    the secrets of time manipulation. '
+  - 'On a distant planet, there existed a garden with phosphorescent plants that
+    illuminated the night sky. Each plant emitted a different color, creating a breathtaking
+    display of natural beauty. Alex, an intergalactic botanist, visited the garden
+    to study these unique plants and understand their role in the planet''s ecosystem. '
+  - 'In a futuristic city, there was an underground library that stored holographic
+    books containing information from various galaxies. Olivia, a knowledge seeker,
+    accessed the library using a neural interface. The holographic books projected
+    lifelike images, allowing readers to immerse themselves in the worlds described
+    within the pages. '
+  - 'In a parallel dimension, there was a floating city where gravity worked in reverse.
+    People walked on the undersides of buildings, and cars traveled on roads suspended
+    in the air. Jack, an adventurous pilot, navigated the upside-down cityscape to
+    deliver supplies to those living in this extraordinary world. '
+  - In a dreamlike realm, there existed a garden where flowers could communicate
+    with each other through a melodic language. Ella, a dreamweaver, entered this
+    ethereal garden to witness the vibrant exchange of melodies between the flowers.
+    Each bloom had a unique song that contributed to the harmony of the enchanted
+    space
   countdownDuration: 30
   currentTime: 0
   finish: 0
@@ -6078,33 +6117,129 @@ MonoBehaviour:
   questionIndex: 0
   whichButtonPressed: 0
   soal:
-  - Darimana kah Budi berasal ?
-  - Dimana letak kantor Budi ?
-  - Apa yang Budi sering pikirkan ketika depresi ?
-  - Warna apa yang disukai Richard ?
-  - Makanan apa yang disukai Richard ?
-  - Apakah Richard suka terlibat dalam gotong royong ?
+  - What was in the village?
+  - 'What did the pond grant to those who visited with a pure heart? '
+  - 'What did Sarah notice as she approached the pond? '
+  - 'Where was the hidden temple? '
+  - 'What did Lisa discover that led her to the temple? '
+  - 'What challenges did Lisa face on her journey? '
+  - 'What was in the seaside town? '
+  - 'How long had the lighthouse been standing? '
+  - 'What happened on the stormy night? '
+  - 'Where was the abandoned mansion located? '
+  - 'What was the legend about? '
+  - 'What happened to those who tried spending a night inside? '
+  - 'Where was the hidden oasis? '
+  - 'What did the oasis offer to travelers? '
+  - How did Maya discover the oasis?
+  - 'What was in the metropolis? '
+  - What did the clock tower control?
+  - 'How did Mia unlock the secrets of the clock tower? '
+  - 'Where was the garden located? '
+  - 'What was special about the plants in the garden? '
+  - Why did Alex visit the garden?
+  - 'Where was the library located? '
+  - What did the books in the library contain?
+  - How did Olivia access the library?
+  - Where was the floating city located?
+  - How did gravity work in the floating city?
+  - What was Jack's role in the city?
+  - Where was the garden located?
+  - How did the flowers communicate?
+  - What was Ella's role in the garden?
   opsiA:
-  - Jawa Barat
-  - Jalan Senapelan
-  - Makan
-  - Merah Tua
-  - Ayam Rebus
-  - Tidak ada Info
+  - Pond
+  - Wishes
+  - Birds
+  - Desert
+  - Map
+  - Mountains
+  - Castle
+  - Decades
+  - Shipwreck
+  - City
+  - Treasure
+  - They slept peacefully
+  - Desert
+  - Shelter
+  - Map
+  - Fountain
+  - Weather
+  - Found a key
+  - Earth
+  - 'Glow in the dark '
+  - To study animals
+  - Underground
+  - Recipes
+  - Physical key
+  - Parallel dimension
+  - In reverse
+  - Explorer
+  - Reality
+  - Through touch
+  - Dreamweaver
   opsiB:
-  - Jawa Timur
-  - Jalan Rambutan
-  - Mandi
-  - Hijau Tua
-  - Ikan Goreng
-  - Tidak
+  - Mountains
+  - Toys
+  - Flowers
+  - Rainforests
+  - Key
+  - Rivers
+  - Lighthouse
+  - Centuries
+  - Celebration
+  - Countryside
+  - Ghost
+  - They had disappeared
+  - Arctic
+  - Water
+  - Compass
+  - Clock tower
+  - Time
+  - Discovered a hidden room
+  - Moon
+  - Made music
+  - To explore caves
+  - Skyscraper
+  - Holographic image
+  - Neural interface
+  - Underground
+  - Normally
+  - Pilot
+  - Dreamlike  realm
+  - Through melodic language
+  - Gardener
   opsiC:
-  - Bekasi
-  - Jalan Joks
-  - Liburan
-  - Biru Tua
-  - Ayam Goreng
-  - Iya
+  - Desert
+  - Books
+  - Rocks
+  - Tundra
+  - Compass
+  - Valleys
+  - School
+  - Years
+  - Fireworks
+  - Beach
+  - Witch
+  - They had nightmares
+  - Forest
+  - Fire
+  - Exploration
+  - Playground
+  - Music
+  - Climbed to the top
+  - Distant planet
+  - Changed colors
+  - To study plants
+  - Island
+  - Map
+  - Voice command
+  - Mountain
+  - Upside down
+  - Chef
+  - Desert
+  - Through colors
+  - Musician
   scorePanel: {fileID: 1511613697}
   finishGameText: {fileID: 156378932}
 --- !u!4 &2131975880
