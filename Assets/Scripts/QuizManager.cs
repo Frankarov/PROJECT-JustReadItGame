@@ -56,21 +56,21 @@ public class QuizManager : MonoBehaviour
     public void Correct()
     {
         int prevScore = PlayerPrefs.GetInt("Score");
-        int currScore = prevScore + 5;
+        int currScore = prevScore + 10;
         PlayerPrefs.SetInt("Score", currScore);
         gameManagerScript.scoreText.text = currScore.ToString();
-        questionnaireScore += 5;
+        questionnaireScore += 10;
     }
 
     public void Wrong()
     {
         int prevScore = PlayerPrefs.GetInt("Score");
-        int currScore = prevScore - 10;
+        int currScore = prevScore - 5;
         PlayerPrefs.SetInt("Score", currScore);
         gameManagerScript.scoreText.text = currScore.ToString();
         if (questionnaireScore > 0)
         {
-            questionnaireScore -= 10;
+            questionnaireScore -= 5;
         }
             
     }
