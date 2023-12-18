@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int thenScore;
     public bool isStart = false;
-
+    public int timeScore = 0;
     void Start()
     {
         textReading.text = reading[readingVersion];
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         int previousScore = PlayerPrefs.GetInt("Score");
         thenScore = currentTimeInt + previousScore;
         PlayerPrefs.SetInt("Score", thenScore);
-
+        timeScore += currentTimeInt;
     }
 
     public void ShopYes()

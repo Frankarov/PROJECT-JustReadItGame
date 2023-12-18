@@ -41,6 +41,7 @@ public class QuizManager : MonoBehaviour
 
     private int questionnaireScore = 0;
     private int finalScore = 0;
+
     private void Start()
     {
         PlayerPrefs.SetInt("Score", 0);
@@ -95,7 +96,7 @@ public class QuizManager : MonoBehaviour
                 PlayerPrefs.SetInt("Score", 0);
             }
 
-            finalScore = Mathf.RoundToInt((PlayerPrefs.GetInt("Score") + questionnaireScore) / 2);
+            finalScore = Mathf.RoundToInt((gameManagerScript.timeScore + questionnaireScore) / 2);
             if (finalScore > 300 && finalScore<450)
             {
                 finishGameText.text = "Good";
@@ -112,7 +113,7 @@ public class QuizManager : MonoBehaviour
             canvasQuiz.SetActive(false);
             scorePanel.SetActive(true);
             scorePanel.transform.GetChild(3).transform.GetComponent<TMPro.TMP_Text>().text = "Final Score : " + finalScore;
-            scorePanel.transform.GetChild(1).transform.GetComponent<TMPro.TMP_Text>().text = "Reading Speed Score        : " + PlayerPrefs.GetInt("Score");
+            scorePanel.transform.GetChild(1).transform.GetComponent<TMPro.TMP_Text>().text = "Reading Speed Score        : " + gameManagerScript.timeScore;
             scorePanel.transform.GetChild(2).transform.GetComponent<TMPro.TMP_Text>().text = "Reading Comprehension Score: " + questionnaireScore;
             return;
         }
