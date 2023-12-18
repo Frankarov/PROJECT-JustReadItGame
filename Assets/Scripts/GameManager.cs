@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text timerText;
     public TMP_Text scoreText;
     public string[] reading;
-    private int readingVersion;
+    public int readingVersion;
     
     public float countdownDuration;
     public float currentTime;
@@ -75,10 +75,11 @@ public class GameManager : MonoBehaviour
 
     public void Finish()
     {
+        Debug.Log("Finish");
         canvasQuiz.SetActive(true);
         canvasReading.SetActive(false);
         finish = true;
-        readingVersion =+ 1;
+        readingVersion = readingVersion + 1;
         textReading.text = reading[readingVersion];
         currentTimeInt = Mathf.RoundToInt(currentTime);
         int previousScore = PlayerPrefs.GetInt("Score");
